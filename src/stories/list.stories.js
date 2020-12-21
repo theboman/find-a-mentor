@@ -78,3 +78,25 @@ export const ListGeneric = () => {
         </StoriesContainer>
     );
 };
+
+
+// List takes children of type children
+export const ListWithLi = () => {
+
+
+    return (
+        <StoriesContainer>
+            <Card title="List Example" onEdit={() => console.log("Edit is Clicked!")}>
+                <List>
+                    <h1> A list passed as children</h1>
+                    <List.Item type="email" value="bo@9k9.com">bo@9k9.co</List.Item >
+                    <List.Item type="spokenLanguages">test</List.Item >
+                    <List.Item type="country">test</List.Item >
+                    <List.Item type="title">test</List.Item >
+                    <List.Item type="tags">test</List.Item >
+
+                </List>
+            </Card>
+        </StoriesContainer>
+    );
+};
