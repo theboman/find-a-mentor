@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { desktop } from '../styles/shared/devices';
+import PropTypes from 'prop-types';
+
+
+// need to add prop types?
 
 const ModalContainer = styled.div`
   height: 100vh;
@@ -118,9 +122,20 @@ export const Modal = ({ closeModal, onSave, title, children }) => (
     </ContentContainer>
     <Footer>
       <ButtonBar>
+
         <SecondaryButton onClick={closeModal}>Close</SecondaryButton>
-        <PrimaryButton onClick={onSave}>Save</PrimaryButton>
+        {onSave ? <PrimaryButton onClick={onSave}>Save</PrimaryButton> : null}
       </ButtonBar>
     </Footer>
   </ModalContainer>
 );
+
+
+Modal.propTypes = {
+  closeModal: PropTypes.func,
+  onSave: PropTypes.func,
+  title: PropTypes.string,
+  children: PropTypes.node
+
+
+};
