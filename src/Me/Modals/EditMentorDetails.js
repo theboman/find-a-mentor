@@ -1,3 +1,6 @@
+// this is legacy code do not use this for current method for modals
+// please ref storybook
+
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 
